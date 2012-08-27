@@ -12,9 +12,7 @@ cat << EOF
   produces a Debian package file (.deb).
 
   OPTIONS:
-    -h Show help.
-    -v Specify the version of Twig to download.
-    -m Specify the maintainer name.
+    -v <version> Specify the version of Twig to download (e.g. -v 1.9.2).
 EOF
 }
 
