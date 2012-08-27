@@ -12,7 +12,6 @@ install:
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	#mkdir -p debian/twig/usr/share/php/
 	cp -r lib/Twig debian/twig/usr/share/php/twig/
 
 binary-indep: install
