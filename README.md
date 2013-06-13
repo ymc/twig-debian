@@ -11,7 +11,7 @@ When a new version of Twig is released:
  4. Fix any lintian errors/warnings and re-build as necessary.
 
 The build.sh script will create a .deb file in your current directory - this can then
-be installed using dpkg -i <file>.deb.
+be installed using `dpkg -i file.deb`.
 
 If installing the package manually, you must ensure that all dependencies have been
 installed beforehand, as dpkg will not automatically resolve them.
