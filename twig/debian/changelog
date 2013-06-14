@@ -2,4 +2,4 @@ twig (1.13.1-1) unstable; urgency=low
 
   * Initial release. (Closes: #645883)
 
- -- Paul Waring <paul@xk7.net>  Mon, 27 Aug 2012 20:13:43 +0100
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Fri, 14 Jun 2013 06:50:38 +0200

@@ -1,5 +1,5 @@
 Source: twig
-Maintainer: Paul Waring <paul@xk7.net>
+Maintainer: Daniel Beyer <dabe@deb.ymc.ch>
 Section: php
 Priority: optional
 Standards-Version: 3.9.4
