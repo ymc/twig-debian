@@ -3,7 +3,7 @@ Maintainer: Paul Waring <paul@xk7.net>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.3
-Build-Depends: debhelper (>= 8)
+Build-Depends: debhelper (>= 9)
 Homepage: http://twig.sensiolabs.org/
 Vcs-Browser: https://github.com/ymc/twig-debian
 Vcs-Git: git://github.com/ymc/twig-debian.git
