@@ -1,0 +1,38 @@
+1) About Twig
+=============
+Twig is a fast, secure and flexible template engine for php, implementing an
+own domain specific language which originated from Jinja and Django templates.
+It optionally can make use of a php5 extension, that enhances its performance.
+Further details can be found online at <http://twig.sensiolabs.org/>.
+
+
+2) Twig in Debian
+=================
+
+2.1) Location of Twig's php code in Debian
+------------------------------------------
+Twig's php code is located at: /usr/share/php/Twig
+
+2.2) Registering Twig's autoloader
+----------------------------------
+Since Twig is placed within the include_path used by default in Debian,
+no absolute path is needed to include twig. It therefore it's recommended to
+not us an absolute '/path/to/lib/Twig/Autoloader.php', as Twig's upstream
+suggests in its documentation, but simply us a relative 'Twig/Autoloader.php'.
+
+2.2.1) Example code-snippet for registering Twig's autoloader
+-------------------------------------------------------------
+<?php
+  require_once 'Twig/Autoloader.php';
+  Twig_Autoloader::register();
+?>
+
+2.3) Enhancing the performance of Twig with its php5-extension
+--------------------------------------------------------------
+A php5 extension written in C exists, that can speed up the Twig template
+engine. In Debian the Twig php code and the C extension and are separated into
+two package. The php5 C extension for Twig can be found in the package
+php5-twig-extension. For more information check its package description.
+
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sat, 29 Jun 2013 15:53:05 +0200
