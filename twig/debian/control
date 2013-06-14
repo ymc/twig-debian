@@ -4,6 +4,9 @@ Section: misc
 Priority: optional
 Standards-Version: 3.9.3
 Build-Depends: debhelper (>= 8)
+Homepage: http://twig.sensiolabs.org/
+Vcs-Browser: https://github.com/ymc/twig-debian
+Vcs-Git: git://github.com/ymc/twig-debian.git
 
 Package: twig
 Architecture: all
