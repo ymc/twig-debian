@@ -1,6 +1,6 @@
 Source: twig
 Maintainer: Paul Waring <paul@xk7.net>
-Section: misc
+Section: php
 Priority: optional
 Standards-Version: 3.9.4
 Build-Depends: debhelper (>= 9)
