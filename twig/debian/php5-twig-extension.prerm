@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+[ "$1" = "remove" ] && php5dismod twig
+
+#DEBHELPER#
+
+exit 0
