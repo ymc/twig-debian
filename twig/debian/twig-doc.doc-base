@@ -1,0 +1,12 @@
+Document: twig-manual
+Title: Twig template engine documentation
+Abstract: This documentation describes the internals of Twig and the use of
+ it from the perspective of a template designer as well as from the
+ perspective of a developer.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/twig-doc/manual/index.html
+Files: /usr/share/doc/twig-doc/manual/*.html
+ /usr/share/doc/twig-doc/manual/*/*.html
+

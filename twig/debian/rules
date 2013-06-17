@@ -1,4 +1,27 @@
 #!/usr/bin/make -f
 
+TWIG_RELEASE_VERSION := $(shell dpkg-parsechangelog | grep -E -e '^Version:' | sed -r 's/^[^:]+: (.*)-[^-]+$$/\1/')
+TWIG_VERSION := $(shell echo $(TWIG_RELEASE_VERSION) | sed -r 's/^([0-9]+\.[0-9]+).*/\1/')
+
 %:
 	+dh $@
+
+override_dh_install-indep:
+	dh_install -i
+	sphinx-build -C \
+	 -b html \
+	 -D source_suffix='.rst' \
+	 -D master_doc='index' \
+	 -D project='twig-doc' \
+	 -D copyright='Fabien Potencier' \
+	 -D version='${TWIG_VERSION}' \
+	 -D release='${TWIG_RELEASE_VERSION}' \
+	 -D pygments_style='sphinx' \
+	 -D html_theme='default' \
+	 doc debian/twig-doc/usr/share/doc/twig-doc/manual
+	rm -f debian/twig-doc/usr/share/doc/twig-doc/manual/.buildinfo
+	rm -rf debian/twig-doc/usr/share/doc/twig-doc/manual/.doctree
+	rm -f debian/twig-doc/usr/share/doc/twig-doc/manual/_static/jquery.js
+	ln -s /usr/share/javascript/jquery/jquery.js debian/twig-doc/usr/share/doc/twig-doc/manual/_static/jquery.js
+	rm -f debian/twig-doc/usr/share/doc/twig-doc/manual/genindex.html
+	ln -s index.html debian/twig-doc/usr/share/doc/twig-doc/manual/genindex.html
