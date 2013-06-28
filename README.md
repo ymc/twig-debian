@@ -26,7 +26,6 @@ Twig is a modern template engine for PHP
 Legal
 -----
 * Twig is Licensed under a BSD-style license - see [twig/LICENSE](https://github.com/ymc/twig-debian/blob/master/twig/LICENSE)
-* The Twig documentation is released under the [Creative Commons Attribution-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-sa/3.0/legalcode) license
 * The Twig C extension for php is released under a BSD-style license - see [twig/ext/twig/LICENSE](https://github.com/ymc/twig-debian/blob/master/twig/ext/twig/LICENSE)
 * The Debian packaging is released unser the [MIT](http://opensource.org/licenses/MIT) license
 

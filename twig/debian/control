@@ -3,7 +3,7 @@ Maintainer: Daniel Beyer <dabe@deb.ymc.ch>
 Section: php
 Priority: optional
 Standards-Version: 3.9.4
-Build-Depends: debhelper (>= 9), python-sphinx, php5-dev
+Build-Depends: debhelper (>= 9), php5-dev
 Homepage: http://twig.sensiolabs.org/
 Vcs-Browser: https://github.com/ymc/twig-debian
 Vcs-Git: git://github.com/ymc/twig-debian.git
@@ -23,18 +23,6 @@ Description: Flexible, fast, and secure template engine for PHP
  Flexible: Twig is powered by a flexible lexer and parser.
   This allows the developer to define its own custom tags and filters, and
   create its own DSL.
-
-Package: twig-doc
-Section: doc
-Architecture: all
-Depends: ${misc:Depends}, libjs-jquery
-Description: Twig template engine documentation
- This documentation describes the internals of Twig and the use of
- it from the perspective of a template designer as well as from the
- perspective of a developer.
- .
- For more details about the Twig template engine see the twig package
- description.
 
 Package: php5-twig-extension
 Architecture: any

@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
-TWIG_RELEASE_VERSION := $(shell dpkg-parsechangelog | grep -E -e '^Version:' | sed -r 's/^[^:]+: (.*)-[^-]+$$/\1/')
-TWIG_VERSION := $(shell echo $(TWIG_RELEASE_VERSION) | sed -r 's/^([0-9]+\.[0-9]+).*/\1/')
+
+TWIG_RELEASE_VERSION := $(shell dpkg-parsechangelog | grep -E -e '^Version:' | sed -r 's/^[^:]+: (.*)\+dfsg-[^-]+$$/\1/')
 
 %:
 	+dh $@
@@ -29,31 +29,12 @@ override_dh_install-arch:
 	 make install INSTALL_ROOT=../../debian/php5-twig-extension
 	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-twig-extension.substvars
 
-override_dh_install-indep:
-	dh_install -i
-	sphinx-build -C \
-	 -b html \
-	 -D source_suffix='.rst' \
-	 -D master_doc='index' \
-	 -D project='twig-doc' \
-	 -D copyright='Fabien Potencier' \
-	 -D version='${TWIG_VERSION}' \
-	 -D release='${TWIG_RELEASE_VERSION}' \
-	 -D pygments_style='sphinx' \
-	 -D html_theme='default' \
-	 doc debian/twig-doc/usr/share/doc/twig-doc/manual
-	rm -f debian/twig-doc/usr/share/doc/twig-doc/manual/.buildinfo
-	rm -rf debian/twig-doc/usr/share/doc/twig-doc/manual/.doctree
-	rm -f debian/twig-doc/usr/share/doc/twig-doc/manual/_static/jquery.js
-	ln -s /usr/share/javascript/jquery/jquery.js debian/twig-doc/usr/share/doc/twig-doc/manual/_static/jquery.js
-	rm -f debian/twig-doc/usr/share/doc/twig-doc/manual/genindex.html
-	ln -s index.html debian/twig-doc/usr/share/doc/twig-doc/manual/genindex.html
-
 get-orig-source:
 	mkdir debian/temp-get-orig-source
 	wget -O debian/temp-get-orig-source/upstream.tar.gz https://github.com/fabpot/Twig/archive/v${TWIG_RELEASE_VERSION}.tar.gz
 	mkdir debian/temp-get-orig-source/upstream-orig
 	tar -xzf debian/temp-get-orig-source/upstream.tar.gz -C debian/temp-get-orig-source/upstream-orig
 	find debian/temp-get-orig-source/upstream-orig -type f -name '.gitignore' -delete
-	tar -C debian/temp-get-orig-source/upstream-orig -cJf ../twig_${TWIG_RELEASE_VERSION}.orig.tar.xz Twig-${TWIG_RELEASE_VERSION}
+	rm -rf debian/temp-get-orig-source/upstream-orig/*/doc
+	tar -C debian/temp-get-orig-source/upstream-orig -cJf ../twig_${TWIG_RELEASE_VERSION}+dfsg.orig.tar.xz Twig-${TWIG_RELEASE_VERSION}
 	rm -rf debian/temp-get-orig-source
