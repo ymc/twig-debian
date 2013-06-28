@@ -48,3 +48,12 @@ override_dh_install-indep:
 	ln -s /usr/share/javascript/jquery/jquery.js debian/twig-doc/usr/share/doc/twig-doc/manual/_static/jquery.js
 	rm -f debian/twig-doc/usr/share/doc/twig-doc/manual/genindex.html
 	ln -s index.html debian/twig-doc/usr/share/doc/twig-doc/manual/genindex.html
+
+get-orig-source:
+	mkdir debian/temp-get-orig-source
+	wget -O debian/temp-get-orig-source/upstream.tar.gz https://github.com/fabpot/Twig/archive/v${TWIG_RELEASE_VERSION}.tar.gz
+	mkdir debian/temp-get-orig-source/upstream-orig
+	tar -xzf debian/temp-get-orig-source/upstream.tar.gz -C debian/temp-get-orig-source/upstream-orig
+	find debian/temp-get-orig-source/upstream-orig -type f -name '.gitignore' -delete
+	tar -C debian/temp-get-orig-source/upstream-orig -cJf ../twig_${TWIG_RELEASE_VERSION}.orig.tar.xz Twig-${TWIG_RELEASE_VERSION}
+	rm -rf debian/temp-get-orig-source
