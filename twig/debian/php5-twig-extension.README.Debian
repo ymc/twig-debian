@@ -1,0 +1,37 @@
+1) About the Twig php5 C extension
+==================================
+The Twig template engine for php optionally can make use of a php5 extension,
+written in C, that enhances its performance. This extension does not replace
+Twig's php code, since it only provides a C implementation of the method
+Twig_Template::getAttribute().
+For further details regarding the Twig template engine, check the description
+of package twig or visit Twig's homepage at <http://twig.sensiolabs.org/>.
+
+
+2) Twig's C extension in Debian
+===============================
+
+2.1) The name of the C extension in Debian
+------------------------------------------
+Twig's php5 C extension is build as twig.so.
+
+2.2) Enabling / disabling the C extension
+-----------------------------------------
+In Debian you can enable or disable the C extension with the commands
+php5enmod and php5dismod. Please keep in mind that after using those you
+might need to restart our application server (e.g. Apache) to make it aware
+of the change. By default the extension is enabled after installing the
+package php5-twig-extension.
+
+2.2.1) Disabling the Twig C extension
+-------------------------------------
+To disable the Twig C extension run:
+ # php5dismod twig
+
+2.2.2) Enabling the Twig C extension
+------------------------------------
+To enable the Twig C extension run:
+ # php5enmod twig
+
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sun, 30 Jun 2013 18:02:49 +0200
