@@ -25,11 +25,11 @@ Twig is a modern template engine for PHP
 
 Legal
 -----
-* Twig is Licensed under a BSD-style license - see [twig/LICENSE](https://github.com/ymc/twig-debian/blob/master/twig/LICENSE)
-* The Twig C extension for php is released under a BSD-style license - see [twig/ext/twig/LICENSE](https://github.com/ymc/twig-debian/blob/master/twig/ext/twig/LICENSE)
+* Twig is Licensed under a BSD-style license - see [twig/LICENSE](twig/LICENSE)
+* The Twig C extension for php is released under a BSD-style license - see [twig/ext/twig/LICENSE](twig/ext/twig/LICENSE)
 * The Debian packaging is released unser the [MIT](http://opensource.org/licenses/MIT) license
 
-For further information please consult the [Debian copyright file](https://github.com/ymc/twig-debian/blob/master/twig/debian/copyright).
+For further information please consult the [Debian copyright file](twig/debian/copyright).
 
 ANY CONTENT IN THIS REPOSITORY IS PROVIDED "AS IS" AND THE AUTHORS DISCLAIMS
 ALL WARRANTIES WITH REGARD TO ANY CONTENT IN THIS REPOSITORY INCLUDING ALL
