@@ -20,7 +20,7 @@ no absolute path is needed to include twig. It therefore it's recommended to
 not us an absolute '/path/to/lib/Twig/Autoloader.php', as Twig's upstream
 suggests in its documentation, but simply us a relative 'Twig/Autoloader.php'.
 
-2.2.1) Example code-snippet for registering Tiwg's autoloader
+2.2.1) Example code-snippet for registering Twig's autoloader
 -------------------------------------------------------------
 <?php
   require_once 'Twig/Autoloader.php';
