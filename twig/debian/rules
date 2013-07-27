@@ -25,6 +25,11 @@ override_dh_auto_test:
 	 make test
 	phpunit
 
+override_dh_install-indep:
+	dh_install --fail-missing lib/Twig usr/share/php/
+	rm -f debian/twig/usr/share/php/Twig/Test/*.php
+	rmdir debian/twig/usr/share/php/Twig/Test
+
 override_dh_install-arch:
 	cd ext/twig && \
 	 make install INSTALL_ROOT=../../debian/php5-twig-extension
