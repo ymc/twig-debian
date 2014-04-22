@@ -3,7 +3,10 @@ Maintainer: Daniel Beyer <dabe@deb.ymc.ch>
 Section: php
 Priority: optional
 Standards-Version: 3.9.4
-Build-Depends: debhelper (>= 9), php5-dev, phpunit
+Build-Depends: debhelper (>= 9),
+ php5-dev,
+ phpunit,
+ re2c
 Homepage: http://twig.sensiolabs.org/
 Vcs-Browser: https://github.com/ymc/twig-debian
 Vcs-Git: git://github.com/ymc/twig-debian.git
