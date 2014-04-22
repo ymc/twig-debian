@@ -4,7 +4,7 @@
 TWIG_RELEASE_VERSION := $(shell dpkg-parsechangelog | grep -E -e '^Version:' | sed -r 's/^[^:]+: (.*)\+dfsg-[^-]+$$/\1/')
 
 %:
-	+dh $@
+	dh $@ --with phpcomposer
 
 override_dh_auto_clean:
 	cd ext/twig && \

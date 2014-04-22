@@ -6,6 +6,7 @@ Standards-Version: 3.9.4
 Build-Depends: debhelper (>= 9),
  php5-dev,
  phpunit,
+ pkg-php-tools (>= 1.7~),
  re2c
 Homepage: http://twig.sensiolabs.org/
 Vcs-Browser: https://github.com/ymc/twig-debian
@@ -13,7 +14,7 @@ Vcs-Git: git://github.com/ymc/twig-debian.git
 
 Package: php-twig
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
 Recommends: php5
 Suggests: php5-twig-extension, twig-doc
 Description: Flexible, fast, and secure template engine for php
