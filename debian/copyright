@@ -5,10 +5,9 @@ Source: https://github.com/fabpot/Twig
 Files-Excluded: doc/*
 
 Files: *
-Copyright: 2009-2013 Fabien Potencier
-           2009-2013 Armin Ronacher
+Copyright: 2009-2014 Twig Team
 License: BSD-twig
- Copyright (c) 2009-2013 by the Twig Team, see AUTHORS for more details.
+ Copyright (c) 2009-2014 by the Twig Team.
  .
  Some rights reserved.
  .
