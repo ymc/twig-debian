@@ -2,7 +2,7 @@ Source: twig
 Maintainer: Daniel Beyer <dabe@deb.ymc.ch>
 Section: php
 Priority: optional
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9),
  php5-dev,
  phpunit,
