@@ -69,12 +69,12 @@ License: BSD-zend
  THE POSSIBILITY OF SUCH DAMAGE.
 
 Files: debian/*
-Copyright: 2012, 2013 Paul Waring
-           2013 Daniel Beyer
+Copyright: 2013, 2014 Daniel Beyer
+           2012, 2013 Paul Waring
            2012 Guillaume Duhamel
 License: MIT
- Copyright (c) 2012, 2013 Paul Waring
-               2013 Daniel Beyer
+ Copyright (c) 2013, 2014 Daniel Beyer
+               2012, 2013 Paul Waring
                2012 Guillaume Duhamel
  .
  Permission is hereby granted, free of charge, to any person obtaining a copy
