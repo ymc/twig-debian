@@ -27,8 +27,8 @@ override_dh_auto_test:
 
 override_dh_install-indep:
 	dh_install --fail-missing lib/Twig usr/share/php/
-	rm -f debian/twig/usr/share/php/Twig/Test/*.php
-	rmdir debian/twig/usr/share/php/Twig/Test
+	rm -f debian/php-twig/usr/share/php/Twig/Test/*.php
+	rmdir debian/php-twig/usr/share/php/Twig/Test
 
 override_dh_install-arch:
 	cd ext/twig && \
