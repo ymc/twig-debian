@@ -35,13 +35,3 @@ override_dh_install-arch:
 	 make install INSTALL_ROOT=../../debian/php5-twig-extension
 	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-twig-extension.substvars
 	dh_install --fail-missing
-
-get-orig-source:
-	mkdir debian/temp-get-orig-source
-	wget -O debian/temp-get-orig-source/upstream.tar.gz https://github.com/fabpot/Twig/archive/v${TWIG_RELEASE_VERSION}.tar.gz
-	mkdir debian/temp-get-orig-source/upstream-orig
-	tar -xzf debian/temp-get-orig-source/upstream.tar.gz -C debian/temp-get-orig-source/upstream-orig
-	find debian/temp-get-orig-source/upstream-orig -type f -name '.gitignore' -delete
-	rm -rf debian/temp-get-orig-source/upstream-orig/*/doc
-	tar -C debian/temp-get-orig-source/upstream-orig -cJf ../twig_${TWIG_RELEASE_VERSION}+dfsg.orig.tar.xz Twig-${TWIG_RELEASE_VERSION}
-	rm -rf debian/temp-get-orig-source

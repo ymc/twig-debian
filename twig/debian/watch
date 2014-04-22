@@ -1,3 +1,4 @@
 version=3
 opts=filenamemangle=s/.+\/v?(.*)\.tar\.gz/Twig-$1.tar.gz/,dversionmangle=s/\+dfsg// \
-  https://github.com/fabpot/Twig/tags .*/v?(\d[\d\.]+)\.tar\.gz
+  https://github.com/fabpot/Twig/tags .*/v?(\d[\d\.]+)\.tar\.gz \
+  debian sh debian/repack.stub
