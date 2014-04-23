@@ -1,5 +1,6 @@
 Source: twig
-Maintainer: Daniel Beyer <dabe@deb.ymc.ch>
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Uploaders: Daniel Beyer <dabe@deb.ymc.ch>
 Section: php
 Priority: optional
 Standards-Version: 3.9.5
