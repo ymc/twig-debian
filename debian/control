@@ -27,7 +27,7 @@ Description: Flexible, fast, and secure template engine for php
 Package: php5-twig-extension
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, ${php:Depends}
-Recommends: twig
+Recommends: php-twig
 Description: Enhance performance of the Twig template engine
  This php extension written in C enhances the performance of the Twig runtime
  engine and therefore neither replaces the PHP code of the Twig nor meant to
