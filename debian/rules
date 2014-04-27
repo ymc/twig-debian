@@ -6,6 +6,17 @@ TWIG_RELEASE_VERSION := $(shell dpkg-parsechangelog | grep -E -e '^Version:' | s
 %:
 	dh $@ --with phpcomposer
 
+override_dh_testdir:
+	dh_testdir
+	if [ -d ./doc ] && \
+	   [ $$(find ./doc -type f | wc -l) -gt 0 ]; then \
+	  echo "E: License of Twig's documentation is unclear." 1>&2; \
+	  echo "   Please remove it from sources!"  1>&2; \
+	  echo "   You can use uscan from devscripts 2.13.5 or newer to" 1>&2; \
+	  echo "   produce a dfsg upstream tarball."  1>&2; \
+	  exit 1;\
+	fi
+
 override_dh_auto_clean:
 	cd ext/twig && \
 	 phpize --clean
