@@ -43,6 +43,6 @@ override_dh_install-indep:
 
 override_dh_install-arch:
 	cd ext/twig && \
-	 make install INSTALL_ROOT=../../debian/php5-twig-extension
-	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-twig-extension.substvars
+	 make install INSTALL_ROOT=../../debian/php5-twig
+	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-twig.substvars
 	dh_install --fail-missing
