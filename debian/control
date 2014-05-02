@@ -16,8 +16,7 @@ Vcs-Git: git://github.com/ymc/twig-debian.git
 Package: php-twig
 Architecture: all
 Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
-Recommends: php5
-Suggests: php5-twig
+Recommends: php5-twig
 Description: Flexible, fast, and secure template engine for php
  Twig is a fast, secure and flexible template engine for php, implementing an
  own domain specific language which originated from Jinja and Django templates.
@@ -25,8 +24,7 @@ Description: Flexible, fast, and secure template engine for php
 
 Package: php5-twig
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, ${php:Depends}
-Recommends: php-twig
+Depends: ${misc:Depends}, ${shlibs:Depends}, ${php:Depends}, php-twig
 Description: Enhance performance of the Twig template engine
  This php extension written in C enhances the performance of the Twig runtime
  engine and therefore neither replaces the PHP code of the Twig nor meant to
