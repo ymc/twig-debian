@@ -19,7 +19,9 @@ override_dh_testdir:
 
 override_dh_auto_clean:
 	cd ext/twig && \
-	 phpize --clean
+	 if which phpize 1>/dev/null; then \
+           phpize --clean; \
+         fi
 	rm -f ext/twig/tmp-php.ini
 
 override_dh_auto_configure:
